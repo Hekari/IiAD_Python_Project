@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wyniki wyszukiwania</title>
+</head>
+<body>
+    <main class="container">
+        <i class="fa-solid fa-volleyball"></i>
+    <h1>Siatkowik </h1>
+    <p>Wyszukaj, zobacz, dowiedz się - o twoim siatkarzu</p>
+</main>
+    {% if zawodnik %}
+        <h1>Wyniki wyszukiwania:</h1>
+        <div>
+            <strong>Imię:</strong> {{ zawodnik['imie'] }}<br>
+            <strong>Nazwisko:</strong> {{ zawodnik['nazwisko'] }}<br>
+            <strong>Pozycja:</strong> {{ zawodnik['pozycja'] }}<br>
+        </div>
+    {% else %}
+        <h1>Brak wyników wyszukiwania</h1>
+    {% endif %}
+</body>
+</html>

@@ -5,10 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Project - VollebayPlayers</title>
+    <!-- main css -->
     <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
+    <script src="https://kit.fontawesome.com/2a3aad39bf.js" crossorigin="anonymous"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto:wght@300&display=swap" rel="stylesheet">
+<!-- fontawesome -->
 </head>
 <body>
-    <h1>Welcome!</h1>
+        <i class="fa-solid fa-volleyball"></i>
+    <h1>Siatkowik </h1>
+    <p>Wyszukaj, zobacz, dowiedz się - o twoim siatkarzu</p>
+<section class="about">
+<!-- about section-->
+<h1>Wyszukiwanie zawodników</h1>
+    <form method="POST" action="/">
+        <input type="text" name="tekst" placeholder="Wpisz tekst">
+        <input type="submit" value="Szukaj">
+    </form>
+</section>
     <script src="{{url_for('static',filename='index.js')}}"></script>
+    
 </body>
 </html>
