@@ -7,7 +7,8 @@
     <title>Python Project - VollebayPlayers</title>
     <!-- main css -->
     <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
-    <script src="https://kit.fontawesome.com/2a3aad39bf.js" crossorigin="anonymous"></script>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +16,10 @@
 <!-- fontawesome -->
 </head>
 <body>
-        <i class="fa-solid fa-volleyball"></i>
-    <h1>Siatkowik </h1>
+   <div class="logo">
+    <h1>Siatkownik </h1>
     <p>Wyszukaj, zobacz, dowiedz się - o twoim siatkarzu</p>
+   </div>
 <section class="about">
 <!-- about section-->
 <h1>Wyszukiwanie zawodników</h1>
@@ -25,8 +27,16 @@
         <input type="text" name="tekst" placeholder="Wpisz tekst">
         <input type="submit" value="Szukaj">
     </form>
+    <img src="../static/assets/simplistic-man-programmer-having-online-meeting.png" alt="search_query_man">
 </section>
+<footer>
+    Projekt wykonali:
+    <strong>Szymon Szpytma</strong>
+    <strong>Julia Wandas</strong>
+    <strong>Karol Wrona</strong>
+</footer>
     <script src="{{url_for('static',filename='index.js')}}"></script>
+    <script src="{{url_for('static',filename='bootstrap.bundle.min.js')}}"></script>
     
 </body>
 </html>

@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Wyniki wyszukiwania</title>
+    <title>Python Project IiAD - Siatkownik</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <!-- bootstrap css -->
+     <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="container">
-        <i class="fa-solid fa-volleyball"></i>
-    <h1>Siatkowik </h1>
-    <p>Wyszukaj, zobacz, dowiedz się - o twoim siatkarzu</p>
-</main>
+    <div class="logo">
+        <h1>Siatkownik </h1>
+        <p>Wyszukaj, zobacz, dowiedz się - o twoim siatkarzu</p>
+       </div>
+<div class="back">
+    <a href="/">Wróc do wyszukiwania</a>
+</div>
     {% if zawodnik %}
-        <h1>Wyniki wyszukiwania:</h1>
-        <div>
-            <strong>Imię:</strong> {{ zawodnik['imie'] }}<br>
-            <strong>Nazwisko:</strong> {{ zawodnik['nazwisko'] }}<br>
-            <strong>Pozycja:</strong> {{ zawodnik['pozycja'] }}<br>
+       <div class="container">
+        <div class="result">
+            <h1>Wyniki wyszukiwania:</h1>
+            <div class="card" style="width: 18rem;">
+                <img src="{{obraz}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><strong>Imię:</strong> {{ zawodnik['imie'] }}<br>
+                    <strong>Nazwisko:</strong> {{ zawodnik['nazwisko'] }}<br></h5>
+                  <p class="card-text"><strong>Pozycja:</strong> {{ zawodnik['pozycja'] }}<br></p>
+                </div>
+              </div>
         </div>
+        <div class="chart">
+            <h2>Wykres wydajności</h2>
+            {% if wykres %}
+                <img src="data:image/png;base64,{{ wykres }}" alt="Wykres wydajności">
+            {% else %}
+                <p>Brak danych wykresu.</p>
+            {% endif %}
+        </div>
+       </div>
     {% else %}
-        <h1>Brak wyników wyszukiwania</h1>
+        <div class="errorMsg">
+            <h3>Przepraszamy</h3>
+        <p>Obecnie twój zawodnik aktualnie nie znajduje się w naszej bazie, ale pracujemy nad tym bo to naprawić!</p>
+        <img src="/static/assets/3d-casual-life-man-sitting-cross-legged-and-working-on-laptop.png" alt="error_not_found_player">
+        </div>
+
     {% endif %}
+    <script src="{{url_for('static',filename='bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>

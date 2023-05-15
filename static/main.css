@@ -7,16 +7,63 @@
   font-family: "Outfit", sans-serif;
   font-family: "Roboto", sans-serif;
 }
-h1 {
-  color: green;
-  text-align: center;
+body {
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
 }
-.container {
+.logo h1 {
+  color: green;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.about {
+  margin-top: 5vh;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
-.container p {
-  font-size: 0.8em;
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.h3 {
+  margin-top: 5vh;
+}
+.errorMsg {
+  margin-top: 15vh;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.errorMsg img {
+  align-self: flex-end;
+  width: 256px;
+  height: 216px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about img {
+  align-self: flex-start;
+}
+h2 {
+  text-align: center;
+}
+.back a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+.back a:hover {
+  color: green;
 }
